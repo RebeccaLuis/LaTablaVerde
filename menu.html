@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Menu - Menu</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #427b5f;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 45px; /* Updated font size */
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 25px; /* Updated font size */
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .menu-section {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .menu-category {
+      font-size: 1.8rem;
+      color: #427b5f;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    .menu-title {
+      font-size: 1.2rem;
+      color: #427b5f;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-description {
+      flex: 1;
+      margin-right: 1rem;
+    }
+
+    .menu-price {
+      font-size: 1.2rem;
+      color: #427b5f;
+    }
+
+    footer {
+      background-color: #427b5f;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .bottom-space {
+      margin-top: 100px; /* Increased space at the bottom */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>La Tabla Verde</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Order Online & Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="menu-section">
+      <h2 class="menu-category">Platos Principales – Main Plates</h2>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Tacos de Verduras Asadas – Roasted Vegetable Tacos</p>
+          <p>Soft corn tortillas filled with roasted vegetables like zucchini, bell peppers, sweet potato, and onions, topped with cilantro, radish, and a drizzle of chipotle crema.<br>Vegan, Gluten-Free<br>$13.99 (3 tacos) | Approx. 450 calories</p>
+        </div>
+        <div class="menu-price">$13.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Chiles Rellenos de Quinoa y Frijoles – Quinoa & Bean Stuffed Chiles</p>
+          <p>Roasted poblano chiles stuffed with quinoa, black beans, corn, and cheese, smothered in a tomato-based sauce and topped with crema. Served with Mexican rice and refried beans.<br>Vegetarian<br>$16.50 | Approx. 600 calories</p>
+        </div>
+        <div class="menu-price">$16.50</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Enchiladas de Espinacas y Calabaza – Spinach & Squash Enchiladas</p>
+          <p>Corn tortillas filled with sautéed spinach, roasted squash, and a rich green tomatillo sauce, topped with cheese and served with a side of arroz rojo.<br>Vegetarian, Gluten-Free Option Available<br>$15.99 | Approx. 550 calories</p>
+        </div>
+        <div class="menu-price">$15.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Mole Verde con Tofu – Green Mole with Tofu</p>
+          <p>Tofu simmered in a tangy green mole made from pumpkin seeds, cilantro, and tomatillos, served with a side of cilantro-lime rice and sautéed vegetables.<br>Vegan, Gluten-Free<br>$17.50 | Approx. 650 calories</p>
+        </div>
+        <div class="menu-price">$17.50</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Tlayudas con Frijoles y Queso – Tlayudas with Beans & Cheese</p>
+          <p>A traditional Oaxacan dish, a large crispy tortilla topped with black beans, Oaxacan cheese, avocado, lettuce, and pickled onions, with a hint of tlayuda-style seasoning.<br>Vegetarian, Gluten-Free Option Available<br>$14.50 | Approx. 700 calories</p>
+        </div>
+        <div class="menu-price">$14.50</div>
+      </div>
+
+      <h2 class="menu-category">Acompañamientos – Sides</h2>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Papas con Salsa Roja – Potatoes with Red Salsa</p>
+          <p>Crispy potato wedges tossed in smoky, spicy salsa roja, garnished with fresh cilantro and a squeeze of lime.<br>Vegan, Gluten-Free<br>$5.99 | Approx. 250 calories</p>
+        </div>
+        <div class="menu-price">$5.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Elote Callejero – Street Corn</p>
+          <p>Grilled corn on the cob slathered with a lime-infused mayo, chili powder, and a sprinkle of cotija cheese.<br>Vegetarian<br>$4.99 | Approx. 300 calories</p>
+        </div>
+        <div class="menu-price">$4.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Arroz a la Mexicana – Mexican Rice</p>
+          <p>Mexican-style rice sautéed with tomatoes, garlic, onions, and a hint of cumin.<br>Vegan, Gluten-Free<br>$3.99 | Approx. 180 calories</p>
+        </div>
+        <div class="menu-price">$3.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Frijoles de la Olla – Beans from the Pot</p>
+          <p>A bowl of traditional Mexican beans, slow-cooked with epazote and garlic, served with warm tortillas.<br>Vegan, Gluten-Free<br>$4.50 | Approx. 250 calories</p>
+        </div>
+        <div class="menu-price">$4.50</div>
+      </div>
+
+      <h2 class="menu-category">Bebidas – Drinks</h2>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Watermelon Agua Fresca – Watermelon Agua Fresca</p>
+          <p>A refreshing blend of sweet watermelon and tangy lime, served cold.<br>Vegan, Gluten-Free<br>$4.50 | Approx. 150 calories</p>
+        </div>
+        <div class="menu-price">$4.50</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Jamaica (Hibiscus Flower Drink) – Jamaica</p>
+          <p>A traditional Mexican drink made from dried hibiscus flowers, with a tart and slightly sweet flavor.<br>Vegan, Gluten-Free<br>$3.99 | Approx. 120 calories</p>
+        </div>
+        <div class="menu-price">$3.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Cucumber-Mint Agua Fresca – Cucumber-Mint Agua Fresca</p>
+          <p>A cool and refreshing cucumber and mint combination.<br>Vegan, Gluten-Free<br>$4.25 | Approx. 100 calories</p>
+        </div>
+        <div class="menu-price">$4.25</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Pineapple-Basil Agua Fresca – Pineapple-Basil Agua Fresca</p>
+          <p>A tropical drink made from fresh pineapple and basil.<br>Vegan, Gluten-Free<br>$4.50 | Approx. 140 calories</p>
+        </div>
+        <div class="menu-price">$4.50</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Fresh Lemonade – Fresh Lemonade</p>
+          <p>A tangy and sweet classic lemonade made with fresh lemons, agave, and water.<br>Vegan, Gluten-Free<br>$3.99 | Approx. 160 calories</p>
+        </div>
+        <div class="menu-price">$3.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Coconut Water – Coconut Water</p>
+          <p>Naturally hydrating coconut water.<br>Vegan, Gluten-Free<br>$4.00 | Approx. 45 calories</p>
+        </div>
+        <div class="menu-price">$4.00</div>
+      </div>
+
+      <h2 class="menu-category">Postres – Desserts</h2>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Classic Tres Leches Cake (Vegan) – Vegan Tres Leches Cake</p>
+          <p>A light cake soaked in coconut milk, almond milk, and rice milk.<br>Vegan, Gluten-Free<br>$6.99 | Approx. 350 calories</p>
+        </div>
+        <div class="menu-price">$6.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Arroz con Leche – Rice Pudding</p>
+          <p>Creamy rice pudding flavored with cinnamon and vanilla.<br>Vegetarian, Gluten-Free<br>$5.50 | Approx. 220 calories</p>
+        </div>
+        <div class="menu-price">$5.50</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Vegan Flan – Vegan Flan</p>
+          <p>Silky caramel custard made without eggs or dairy.<br>Vegan, Gluten-Free<br>$6.25 | Approx. 280 calories</p>
+        </div>
+        <div class="menu-price">$6.25</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Churros (Vegan) – Vegan Churros</p>
+          <p>Fried dough sprinkled with cinnamon sugar, served with chocolate dipping sauce.<br>Vegan<br>$5.50 | Approx. 300 calories</p>
+        </div>
+        <div class="menu-price">$5.50</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-description">
+          <p class="menu-title">Coconut Lime Pie – Coconut Lime Pie</p>
+          <p>Dairy-free pie made with coconut milk and lime filling.<br>Vegan, Gluten-Free<br>$6.99 | Approx. 350 calories</p>
+        </div>
+        <div class="menu-price">$6.99</div>
+      </div>
+      <div class="bottom-space"></div> <!-- Increased empty space for additional content -->
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 La Tabla Verde. All rights reserved.</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
+<style>
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+</style>

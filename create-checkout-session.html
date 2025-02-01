@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <form id="checkout-form">
+        <h2>Items in Cart</h2>
+        <ul id="cart-items">
+            <!-- Example items, replace with dynamic content -->
+            <li>Item 1 - $5.00</li>
+            <li>Item 2 - $8.99</li>
+        </ul>
+        <p>Total: $13.99</p>
+
+        <label for="pickup-date">Pickup Date:</label>
+        <input type="date" id="pickup-date" name="pickup-date" required>
+
+        <label for="pickup-time">Pickup Time:</label>
+        <input type="time" id="pickup-time" name="pickup-time" required>
+
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="debit-card">Debit Card</option>
+        </select>
+
+        <div id="card-details">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <label for="card-pin">PIN:</label>
+            <input type="password" id="card-pin" name="card-pin" required>
+        </div>
+
+        <button type="submit">Pay $13.99</button>
+    </form>
+
+    <script>
+        const stripe = Stripe('your-publishable-key'); // Use your Stripe publishable key
+
+        document.getElementById('checkout-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const pickupDate = document.getElementById('pickup-date').value;
+            const pickupTime = document.getElementById('pickup-time').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const cardPin = document.getElementById('card-pin').value;
+
+            const response = await fetch('/create-checkout-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    pickupDate: pickupDate,
+                    pickupTime: pickupTime,
+                    paymentMethod: paymentMethod,
+                    cardNumber: cardNumber,
+                    cardPin: cardPin,
+                }),
+            });
+
+            const session = await response.json();
+
+            // Redirect to Stripe Checkout
+            const result = await stripe.redirectToCheckout({
+                sessionId: session.id,
+            });
+
+            if (result.error) {
+                alert(result.error.message);
+            }
+        });
+    </script>
+</body>
+</html>
